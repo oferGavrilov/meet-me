@@ -1,7 +1,7 @@
 'use strict'
 console.log('work')
 
-const projectNames =['mine-sweeper','books-shop' , 'touch-nums-game', 'ball-board-game', 'todo-list','chess-game','in-picture-game']
+const projectNames =['mine-sweeper','books-shop', 'touch-nums-game', 'ball-board-game', 'todo-list','chess-game']
 
 var gProjects
 
