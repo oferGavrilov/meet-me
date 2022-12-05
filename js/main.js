@@ -25,12 +25,12 @@ function renderProjects() {
               <img class="img-fluid" src="img/${project.name}.png" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>${project.name}</h4>
+              <h4>${project.title}</h4>
               <p class="text-muted">Illustration</p>
             `
     })
 
-    $('.portfolio').html(strHtmls)
+    $('.projects').html(strHtmls)
 }
 
 function renderModals() {
@@ -52,12 +52,10 @@ function renderModals() {
                 <h2>${project.name}</h2>
                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                 <img class="img-fluid d-block mx-auto" src="img/${project.name}.png" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis
-                  dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate,
-                  maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <p>${project.desc}</p>
                   <button value="${project.url}" class="btn btn-info btn-link">Go to web</button>
                 <ul class="list-inline">
-                  <li>Date: January 2017</li>
+                  <li>Date: ${myDate(project.publishedAt)}</li>
                   <li>Client: Threads</li>
                   <li>Category: Illustration</li>
                 </ul>
@@ -76,9 +74,25 @@ function renderModals() {
     $('.modal-container').append(strHtmls)
 }
 
+
 function addEventListeners() {
     $('.btn-link').click(function(){
         console.log(this.value)
         window.open(this.value, '_blank')
     })
+
+    $('.submit-btn').click(function(){
+        const emailValue = $('.email-form').val()
+        const subjectValue = $('.subject-form').val()
+        const textAreaValue = $('.text-area-form').val()
+        console.log(emailValue,subjectValue,textAreaValue)
+        window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${emailValue}&su=${subjectValue}&b
+        ody=${textAreaValue}`)
+    })
+}
+
+function myDate(time) {
+    const date = new Date(time)
+    console.log(date)
+    return `${date.getFullYear()} / ${date.getMonth()} / ${date.getDate()} `
 }
