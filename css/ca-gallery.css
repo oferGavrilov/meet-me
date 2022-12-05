@@ -198,6 +198,7 @@ header.masthead {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 100vh;
 }
 header.masthead .intro-text {
     padding-top: 150px;
@@ -218,6 +219,7 @@ header.masthead .intro-text .intro-heading {
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
 }
+
 @media (min-width: 768px) {
     header.masthead .intro-text {
         padding-top: 300px;
@@ -560,6 +562,7 @@ header.masthead .intro-text .intro-heading {
 }
 .team-member {
     text-align: center;
+    height: 500px;
 }
 .team-member img {
     width: 205px;
