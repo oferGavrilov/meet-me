@@ -14,7 +14,7 @@ function renderProjects() {
     console.log(projects)
     var strHtmls = projects.map(project => {
         return `
-          <div class="col-md-4 col-sm-6 portfolio-item" data-aos="flip-left" data-aos-duration="1200">
+          <div class="col-md-4 col-sm-6 portfolio-item" data-aos="fade-down" data-aos-duration="1200">
             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal${project.id}">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">

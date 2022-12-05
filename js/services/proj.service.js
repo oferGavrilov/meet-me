@@ -16,7 +16,7 @@ function _createProject(id, name,title,desc,url,publishedAt){
         title,
         desc,
         url:`https://ofergavrilov.github.io/proj-${url}`,
-        publishedAt: Date.parse(new Date(publishedAt)),
+        publishedAt: +(new Date(publishedAt)),
         labels: ['title', 'description']
     }
 }
